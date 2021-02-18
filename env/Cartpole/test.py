@@ -10,15 +10,11 @@ import Weights.cartpole_nn_weight_ as w
 
 env = gym.make('CartPole-v0')
 
-inodes = network.inodes
-hnodes = network.hnodes
-onodes = network.onodes
-
 time = 1000
 
 w1 = w.w1
 w2 = w.w2
-nn = NN(inodes,hnodes,onodes,w1,w2)
+nn = NN(w1,w2,func='softsign')
 for episode in range(10):
 	observation = env.reset()
 	score = 0

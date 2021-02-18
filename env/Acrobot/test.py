@@ -9,14 +9,9 @@ from MLP.NN import NN
 import Weights.acrobot_nn_weight_ as w
 
 env = gym.make('Acrobot-v1')
-
-inodes = network.inodes
-hnodes = network.hnodes
-onodes = network.onodes
-
 w1 = w.w1
 w2 = w.w2
-nn = NN(inodes,hnodes,onodes,w1,w2)
+nn = NN(w1,w2,func='softsign')
 for episode in range(10):
 	observation = env.reset()
 	score = 0

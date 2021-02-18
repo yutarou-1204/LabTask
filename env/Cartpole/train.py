@@ -9,6 +9,7 @@ from MLP.NN import NN
 from Algorithm import ES,GA,PSO,DE
 
 env = gym.make('CartPole-v0')
+
 inodes = network.inodes
 hnodes = network.hnodes
 onodes = network.onodes
@@ -21,7 +22,7 @@ def game(w):
 	observation = env.reset()
 	w1 = np.array(w[:int(inodes*hnodes)]).reshape(hnodes,inodes)
 	w2 = np.array(w[int(inodes*hnodes):]).reshape(onodes,hnodes)
-	nn = NN(inodes,hnodes,onodes,w1,w2)
+	nn = NN(w1,w2,func='softsign')
 	total_reward = 0
 	for i in range(time):
 		#env.render()
