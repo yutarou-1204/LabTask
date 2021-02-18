@@ -1,10 +1,10 @@
 import numpy as np
 
-import sys
 import copy
 import random
-import time
-sys.path.append('../../Algorithm')
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent))
 import Parameters.PSO as PSO
 from Plot import plot
 

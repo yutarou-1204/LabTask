@@ -1,10 +1,11 @@
 import gym
 import random
-import sys
 import copy
 import numpy as np
 import network
-sys.path.append('../../')
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 from MLP.NN import NN
 from Algorithm import ES,GA,PSO,DE
 
@@ -16,7 +17,7 @@ onodes = network.onodes
 N = network.N
 save = network.save
 
-time = 1000
+time = 2000
 
 def game(w):
 	observation = env.reset()

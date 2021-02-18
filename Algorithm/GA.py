@@ -1,8 +1,9 @@
 import numpy as np
-import sys
 import random
 import copy
-sys.path.append('../../Algorithm')
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent))
 import Parameters.GA as GA
 from Plot import plot
 

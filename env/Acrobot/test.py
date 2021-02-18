@@ -1,10 +1,11 @@
 import gym
 import random
-import sys
 import copy
 import numpy as np
 import network
-sys.path.append('../../')
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 from MLP.NN import NN
 import Weights.acrobot_nn_weight_ as w
 
